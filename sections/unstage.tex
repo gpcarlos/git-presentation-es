@@ -16,4 +16,18 @@
   \end{columns}
 \end{frame}
 
-% TODO Deshacer los n últimos commits
+\begin{frame}{Deshacer cosas}
+  \begin{columns}[onlytextwidth]
+    \column{0.7\textwidth}
+    \begin{itemize}
+      \item \alert{Deshacer el último commit} \warnning
+        \mint{console}| $ git reset HEAD~1|
+      \item \alert{Deshacer los \texttt{n} últimos commits} \warnning
+        \mint{console}| $ git reset HEAD~<n>|
+      \item \alert{Deshacer commits desechando los cambios en el área de trabajo} \warnning
+        \mint{console}| $ git checkout --hard HEAD~<n>|
+    \end{itemize}
+    \column{0.3\textwidth}
+      \includegraphics[scale=0.2]{images/marty-mcfly}
+  \end{columns}
+\end{frame}
