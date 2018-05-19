@@ -1,0 +1,42 @@
+\begin{frame}[fragile]{Ramificación}
+    \begin{columns}[T,onlytextwidth]
+      \column{0.55\textwidth}
+      \begin{itemize}
+        \item \alert{Crear una rama}
+          \mint{console}| $ git branch <nombre-rama>|
+        \item \alert{moverse entre ramas}
+          \mint{console}| $ git checkout <nombre-rama>|
+        \item \alert{Crear y moverse a la rama creada}
+          \mint{console}| $ git checkout -b <nombre-rama>|
+      \end{itemize}
+      \column{0.45\textwidth}
+        \includegraphics[scale=0.23]{images/branching-illustration}
+    \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Ramificación}
+    \begin{columns}[T,onlytextwidth]
+      \column{0.52\textwidth}
+      \begin{exampleblock}{Ejemplo:}
+        \uncover<2->{
+        \mint{console}| $ git checkout -b issue53|}
+        \uncover<3->{
+        \mint{console}| $ git commit -am 'mensaje'|}
+        \uncover<4->{
+        \mint{console}| $ git checkout master|}
+        \uncover<5->{
+        \mint{console}| $ git checkout -b hotfix|}
+        \uncover<6->{
+        \mint{console}| $ git commit -am 'mensaje'|}
+      \end{exampleblock}
+      \column{0.48\textwidth}
+        \begin{figure}
+          \only<1>{\scalebox{.95}{\input{gitdags/branch}}}
+          \only<2>{\scalebox{.95}{\input{gitdags/branch2}}}
+          \only<3>{\scalebox{.95}{\input{gitdags/branch3}}}
+          \only<4>{\scalebox{.95}{\input{gitdags/branch4}}}
+          \only<5>{\scalebox{.95}{\input{gitdags/branch5}}}
+          \only<6>{\scalebox{.95}{\input{gitdags/branch6}}}
+        \end{figure}
+    \end{columns}
+\end{frame}
