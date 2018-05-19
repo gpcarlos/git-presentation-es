@@ -1,0 +1,101 @@
+\documentclass[aspectratio=169,xcolor=table]{beamer}
+\usetheme{metropolis}
+\usepackage[spanish]{babel}
+\usepackage{tikz}
+\usetikzlibrary{chains}
+\usetikzlibrary{trees}
+\usepackage{minted}
+\setminted{ style=colorful, fontsize=\small, breaklines}
+\usepackage{xcolor-solarized}
+\usepackage{fontawesome}
+\usepackage{gitdags}
+
+\newcommand{\twitter}{\faTwitter\ \href{https://twitter.com/carlosgllp}{carlosgllp}}
+\newcommand{\github}{\faGithub\ \href{https://www.github.com/gpcarlos}{gpcarlos}}
+
+\title{Taller de Git}
+\subtitle{Avanzado}
+\author{Carlos Gallardo Polanco \\ \twitter \\ \github}
+\institute{Escuela Superior de Ingeniería}
+\date{22 de mayo de 2018}
+\subject{Actividad Científico-Técnica}
+\keywords{ESI, UCA, Git, GitHub, LaTeX}
+
+\definecolor{fafafa}{rgb}{0.98, 0.98, 0.98}
+\newcommand{\whiteTitle}{
+  \title{\color{fafafa}Taller de Git}
+  \subtitle{\color{fafafa}Avanzado}
+  \author{\color{fafafa}Carlos Gallardo Polanco \\ \twitter \\ \github}
+  \institute{\color{fafafa}Escuela Superior de Ingeniería}
+  \date{\color{fafafa}22 de mayo de 2018}
+}
+
+% ================================================
+% ================================================
+% ================================================
+
+\begin{document}
+
+\begin{frame}
+  \maketitle
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east,inner sep=40pt] at (current page.north east) {\includegraphics[scale=0.065]{images/logoGit.png}};
+    \node[anchor=south east,inner sep=40pt] at (current page.south east) {\includegraphics[scale=0.3]{images/logoUCA.eps}};
+  \end{tikzpicture}
+\end{frame}
+
+% TODO Conceptos básicos
+% \input{sections/basicConcepts}
+
+% TODO Ver el historial
+% \input{sections/log}
+
+% TODO Comprobar cambio
+% \input{sections/diff}
+
+% TODO Volver atrás en el historial
+% \input{sections/unstage}
+
+% TODO Crear ramas y moverse entre ramas
+% \input{sections/branch}
+
+% TODO Fusionar ramas
+% \input{sections/merge}
+
+% TODO Reorganizar ramas
+% \input{sections/rebase}
+
+% TODO Remotos (pull y push)
+% \input{sections/remote}
+
+% TODO Guardado rápido
+% \input{sections/stash}
+
+% TODO Etiquetas
+% \input{sections/tags}
+
+% TODO gitignore
+% \input{sections/gitignore}
+
+% TODO Configuración
+% \input{sections/config}
+
+% TODO Utilización de SSH en GitHub
+% \input{sections/sshGithub}
+
+% TODO Montar un servidor (Gitlab)
+% \input{sections/gitlab}
+
+% TODO githubEducation
+% \input{sections/githubEducation}
+
+\begin{frame}[standout]
+  \whiteTitle
+  \maketitle
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east,inner sep=40pt] at (current page.north east) {\includegraphics[scale=0.27]{images/logoGitw.png}};
+    \node[anchor=south east,inner sep=40pt] at (current page.south east) {\includegraphics[scale=0.3]{images/logoUCAw.png}};
+  \end{tikzpicture}
+\end{frame}
+
+\end{document}
