@@ -1,30 +1,34 @@
-\begin{frame}[fragile]{Etiquetado - Creación y eliminación}
+\begin{frame}{Etiquetado - Creación y eliminación}
   \begin{columns}[T,onlytextwidth]
     \column{0.6\textwidth}
     \begin{itemize}
-      \item
-      \only<1>{
-        \alert{Etiquetas Ligeras} \\
+      \item \alert{Etiquetas Ligeras} \\
         Puntero a commit
-        \mint{console}|  $ git tag <nombre-tag>|}
-      \only<2>{
-        \alert{Etiquetado tardío} \\
-        \mint{console}|  $ git tag -a <nombre-tag> <SHA-1>|}
-      \item
-      \only<1>{
-        \alert{Etiquetas Anotadas} \\
+        \mint{console}|  $ git tag <nombre-tag>|
+      \item \alert{Etiquetas Anotadas} \\
         Puntero, mensaje, etiquetador...
-        \mint{console}|  $ git tag -a <nombre-tag> -m 'msj'|}
-      \only<2>{
-        \alert{Eliminar etiqueta} \warnning \\
-        \mint{console}|  $ git tag -d <nombre-tag>|}
+        \mint{console}|  $ git tag -a <nombre-tag> -m 'msj'|
     \end{itemize}
     \column{0.4\textwidth}
       \input{gitdags/tagdag}
   \end{columns}
 \end{frame}
 
-\begin{frame}[fragile]{Etiquetado - Listado}
+\begin{frame}{Etiquetado - Creación y eliminación}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.6\textwidth}
+    \begin{itemize}
+      \item \alert{Etiquetado Tardío} \\
+      \mint{console}|  $ git tag -a <nombre-tag> <SHA-1>|
+      \item \alert{Eliminar etiqueta} \warnning \\
+      \mint{console}|  $ git tag -d <nombre-tag>|
+    \end{itemize}
+    \column{0.4\textwidth}
+      \input{gitdags/tagdag}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Etiquetado - Listado}
   \begin{columns}[T,onlytextwidth]
     \column{0.6\textwidth}
     \begin{itemize}
@@ -62,9 +66,9 @@
     \mint{console}|  $ git checkout -b <n-rama> <n-tag>|
     \uncover<2>{
     \vspace{0.5cm}
-    Ejemplo:
-    \mint{console}|  $ git checkout -b version0p9 v0.9|
-    }
+    \begin{exampleblock}{Ejemplo:}
+      \mint{console}|  $ git checkout -b version0p9 v0.9|
+    \end{exampleblock}}
     \column{0.4\textwidth}
       \only<1>{\input{gitdags/tagdag}}
       \only<2>{\input{gitdags/tagdag2}}
