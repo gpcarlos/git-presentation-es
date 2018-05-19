@@ -1,6 +1,6 @@
 \begin{tikzpicture}
   \gitDAG[grow right sep = 1.5em]{
-    A -- B -- C -- E
+    A -- B -- C -- D
   };
   \gitbranch
     {master}      % node name and text
@@ -8,8 +8,8 @@
     {C}          % target
   \gitbranch
     {issue53}      % node name and text
-    {below=of E} % node placement
-    {E}          % target
+    {below=of D} % node placement
+    {D}          % target
   % HDAD reference
   \gitHEAD
     {below=of issue53} % node placement
