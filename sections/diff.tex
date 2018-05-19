@@ -1,0 +1,14 @@
+\begin{frame}[fragile]{Ver los cambios Preparados y No Preparados}
+  Ver los cambios de un archivo respecto a su última confirmación
+  \begin{itemize}
+    \item \alert{Archivo no preparado}
+    \begin{minted}{console}
+      $ git diff <archivo>
+    \end{minted}
+    \item \alert{Archivo preparado}
+    \begin{minted}{console}
+      $ git diff --staged <archivo>
+      $ git diff --cached <archivo>
+    \end{minted}
+  \end{itemize}
+\end{frame}
