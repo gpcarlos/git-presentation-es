@@ -1,0 +1,54 @@
+\begin{frame}{Guardado rápido}
+  \begin{columns}[onlytextwidth]
+    \column{0.3\textwidth}
+    \includegraphics[scale=0.9]{images/gitstash}
+    \column{0.7\textwidth}
+    \begin{itemize}
+      \item \alert{Guardar los cambios}
+        \mint{console}| $ git stash|
+        \mint{console}| $ git stash save 'mensaje'|
+      \item \alert{Guardar sólo los cambios preparados}
+          \mint{console}| $ git stash --keep-index|
+      \item \alert{Guardar de archivos no rastreados}
+          \mint{console}| $ git stash -u|
+      \item \alert{Guardar de forma selectiva}
+          \mint{console}| $ git stash --patch|
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Guardado rápido}
+  \begin{columns}[onlytextwidth]
+    \column{0.3\textwidth}
+    \includegraphics[scale=0.9]{images/gitstash}
+    \column{0.7\textwidth}
+    \begin{itemize}
+      \item \alert{Listarlos}
+          \mint{console}| $ git stash list|
+      \item \alert{Aplicar un guardado}
+          \mint{console}| $ git stash apply <stash@{x}>|
+          {\scriptsize \ \ \texttt{--index}: recupera el estado}
+      \item \alert{Aplicar y sacar un guardado}
+          \mint{console}| $ git stash pop <stash@{x}>|
+      \item \alert{Crear una rama}
+          \mint{console}| $ git stash branch <rama> <stash@{x}>|
+    \end{itemize}
+    {\scriptsize Si no se especifica \texttt{<stash@{x}>}, Git selecciona el más reciente.}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Guardado rápido}
+  \begin{columns}[onlytextwidth]
+    \column{0.3\textwidth}
+    \includegraphics[scale=0.9]{images/gitstash}
+    \column{0.7\textwidth}
+    \begin{itemize}
+      \item \alert{Mostrar las diferencias}
+          \mint{console}| $ git stash show <stash@{x}>|
+      \item \alert{Limpiar el stash} \warnning
+          \mint{console}| $ git stash clear|
+      \item \alert{Sacar un guardado} \warnning
+          \mint{console}| $ git stash drop <stash@{x}>|
+    \end{itemize}
+  \end{columns}
+\end{frame}
