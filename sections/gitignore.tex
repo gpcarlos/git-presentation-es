@@ -1,0 +1,29 @@
+\begin{frame}[fragile]{.gitignore}
+  \begin{columns}[onlytextwidth]
+    \column{0.35\textwidth}
+    \begin{itemize}
+      \item \alert{Comentarios} \mint[style=bw]{bash}|#|
+      \item \alert{Patrones glob} \mint[style=bw]{bash}|*, [abc], ?, [0-9]|
+      \item \alert{Directorios} \mint[style=bw]{bash}|/|
+      \item \alert{Negación} \mint[style=bw]{bash}|!|
+    \end{itemize}
+    \column{0.65\textwidth}
+    \begin{exampleblock}{Ejemplo de .gitignore}
+    \begin{minted}[bgcolor=solarized-base1!12, autogobble=true, fontsize=\scriptsize]{bash}
+      # ignora todos los archivos terminados en .a y .o
+      *.[ao]
+      # pero no lib.a
+      !lib.a
+      # ignora el archivo sum.cpp del directorio
+      /sum.cpp
+      # ignora todos los archivos del directorio build/
+      build/
+      # ignora los .txt del directorio doc/
+      doc/*.txt
+      # ignora los .txt de doc/ y sus subdirectorios
+      doc/**/*.txt
+      claves_secretas # ESTE NO LO IGNORA PORQUE EL COMENTARIO ESTÁ EN LA MISMA LÍNEA
+    \end{minted}
+  \end{exampleblock}
+  \end{columns}
+\end{frame}

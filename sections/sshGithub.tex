@@ -1,0 +1,16 @@
+\begin{frame}{Utilización de la clave pública SSH en \faGithub\ GitHub}
+  Las claves SSH se almacenan en \texttt{$\sim$/.ssh}
+  \begin{itemize}
+    \item \alert{Generación}
+    \mint{console}| $ ssh-keygen|
+    \item \alert{Configuración} \\
+    Id a \texttt{configuración} en Github y añadir la clave contenida en \texttt{$\sim$/.ssh/id\_rsa.pub}
+    \item \alert{Clonación por SSH}
+    \mint{console}| $ git clone git@github.com:user/repo.git|
+  \end{itemize}
+
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east,inner ysep=40pt, inner xsep=20pt] at (current page.north east) {\includegraphics[scale=0.15]{images/logoGithub.png}};
+  \end{tikzpicture}
+
+\end{frame}

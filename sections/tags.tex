@@ -1,0 +1,72 @@
+\begin{frame}[fragile]{Etiquetado - Creación y eliminación}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.6\textwidth}
+    \begin{itemize}
+      \item
+      \only<1>{
+        \alert{Etiquetas Ligeras} \\
+        Puntero a commit
+        \mint{console}|  $ git tag <nombre-tag>|}
+      \only<2>{
+        \alert{Etiquetado tardío} \\
+        \mint{console}|  $ git tag -a <nombre-tag> <SHA-1>|}
+      \item
+      \only<1>{
+        \alert{Etiquetas Anotadas} \\
+        Puntero, mensaje, etiquetador...
+        \mint{console}|  $ git tag -a <nombre-tag> -m 'msj'|}
+      \only<2>{
+        \alert{Eliminar etiqueta} \\
+        \mint{console}|  $ git tag -d <nombre-tag>|}
+    \end{itemize}
+    \column{0.4\textwidth}
+      \input{gitdags/tagdag}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Etiquetado - Listado}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.6\textwidth}
+    \begin{itemize}
+      \item \alert{Todas}
+        \mint{console}|  $ git tag|
+      \item \alert{Por patrón}
+        \mint{console}|  $ git tag -l 'v1*'|
+      \item \alert{Específica}
+        \mint{console}|  $ git show <nombre-tag>|
+    \end{itemize}
+    \column{0.4\textwidth}
+      \input{gitdags/tagdag}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Etiquetado - Compartir}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.6\textwidth}
+    \texttt{git push} no transfiere etiquetas a remotos
+    \begin{itemize}
+      \item \alert{Todas}
+        \mint{console}|  $ git push origin --tags|
+      \item \alert{Específica}
+        \mint{console}|  $ git push origin <nombre-tag>|
+    \end{itemize}
+    \column{0.4\textwidth}
+      \input{gitdags/tagdag}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Etiquetado - Sacar una etiqueta}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.6\textwidth}
+    Para colocar en el directorio de trabajo una versión, es necesario crear una nueva rama en esa etiqueta.
+    \mint{console}|  $ git checkout -b <n-rama> <n-tag>|
+    \uncover<2>{
+    \vspace{0.5cm}
+    Ejemplo:
+    \mint{console}|  $ git checkout -b version0p9 v0.9|
+    }
+    \column{0.4\textwidth}
+      \only<1>{\input{gitdags/tagdag}}
+      \only<2>{\input{gitdags/tagdag2}}
+  \end{columns}
+\end{frame}

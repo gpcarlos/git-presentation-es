@@ -1,0 +1,96 @@
+\begin{frame}[fragile]{Configuración en Git - Niveles de configuración}
+  \begin{center}
+  \begin{tikzpicture}[
+    scale=0.95,
+    start chain=1 going below,
+    start chain=2 going left,
+    node distance=1mm,
+    desc/.style={
+      scale=0.95,
+      on chain=2,
+      rectangle,
+      rounded corners,
+      draw=solarized-base01,
+      semithick,
+      text centered,
+      text width=3cm,
+      minimum height=1.2cm,
+      fill=solarized-green!30
+      },
+    level/.style={
+      scale=0.95,
+      on chain=1,
+      minimum height=12mm,
+      text width=7.5cm
+    },
+    every node/.style={font=\sffamily}
+  ]
+  % Levels
+  \node [level] (Nivel 3) {\alert{.git/config} \\
+  Específico para cada repositorio};
+  \node [level] (Nivel 2) {\alert{$\sim$/.gitconfig}  o \alert{$\sim$/.config/git/config} \\
+  Específico para cada usuario};
+  \node [level] (Nivel 1) {\alert{/etc/config} \\
+  Común a todos los usuarios y repositorios};
+  % Descriptions
+  \chainin (Nivel 3);
+  \node [desc] (--local) {\texttt{$--$local}};
+  \node [desc, continue chain=going below] (--global) {\texttt{$--$global}};
+  \node [desc] (--system) {\texttt{$--$system}};
+  \end{tikzpicture}
+  \vspace{0.5cm}
+  \begin{minted}{console}
+                 $ git config --global <opciones>
+  \end{minted}
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Configuración en Git - Algunos comandos}
+  \alert{Identidad}
+  \begin{minted}{console}
+    $ git config --global user.name "Nombre Apellido Apellido"
+    $ git config --global user.email email@email.com
+  \end{minted}
+  \alert{Editor}
+  \begin{minted}{console}
+    $ git config --global user.editor gedit
+  \end{minted}
+  \alert{Colores}
+  \begin{minted}{console}
+    $ git config --global color.ui true
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Configuración en Git - Algunos comandos}
+  \alert{Mensaje para commit por defecto}
+  \begin{minted}{console}
+    $ git config --global commit.template path/.gitmessage.txt
+  \end{minted}
+  \alert{Gitignore global}
+  \begin{minted}{console}
+    $ git config --global core.excludesfile path/.gitignore_global
+  \end{minted}
+  \alert{Ver la configuración actual}
+  \begin{minted}{console}
+    $ git config --global --list
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Configuración en Git - Alias de Git}
+  \alert{¡Nuestros propios comandos!}
+  \begin{minted}{console}
+    $ git config --global alias.<mi-alias> 'comando'
+  \end{minted}
+  Algunos ejemplos:
+  \begin{minted}{console}
+    $ git config --global alias.co checkout
+    $ git config --global alias.br branch
+    $ git config --global alias.ci commit
+    $ git config --global alias.st status
+  \end{minted}
+  \begin{minted}{console}
+    $ git config --global alias.unstage 'reset HEAD --'
+    $ git config --global alias.last 'log -1 HEAD'
+  \end{minted}
+
+\end{frame}

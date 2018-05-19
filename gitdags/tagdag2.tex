@@ -1,0 +1,35 @@
+\begin{tikzpicture}
+  \gitDAG[grow up sep = 1.5em]{
+    H -- I -- J -- K -- L
+  };
+  % Tag reference
+  \gittag
+    [v0p9]       % node name
+    {v0.9}       % node text
+    {left=of H} % node placement
+    {H}          % target
+  \gittag
+    [v1p0]       % node name
+    {v1.0}       % node text
+    {left=of L} % node placement
+    {L}          % target
+  % Remote branch
+  \gitremotebranch
+    [origmaster]    % node name
+    {\tiny origin/master} % node text
+    {right=of J}    % node placement
+    {J}             % target
+  % Branch
+  \gitbranch
+    {master}      % node name and text
+    {right=of L} % node placement
+    {L}          % target
+  \gitbranch
+    {version0p9}      % node name and text
+    {right=of H}% node placement
+    {H}          % target
+  % HDAD reference
+  \gitHEAD
+    {above=of version0p9} % node placement
+    {version0p9}          % target
+\end{tikzpicture}

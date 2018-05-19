@@ -1,0 +1,62 @@
+\begin{frame}[fragile]{Ver el historial de confirmaciones}
+  \begin{center}
+  \begin{minted}{console}
+                       $ git log <opciones>
+  \end{minted}
+  \alert{Opciones interesantes}
+  \end{center}
+  \begin{table}
+  \rowcolors{1}{solarized-base01!20}{solarized-base01!15}
+  \begin{tabular}{|r|l|} \hline
+    \texttt{-p} & Diferencias \\ \hline
+    \texttt{--stat} & Estadísticas \\ \hline
+    \texttt{--shortstat} & Estadísticas resumidas \\ \hline
+    \texttt{--name-only} & Lista de archivos afectados \\ \hline
+    \texttt{--name-status} & Lista de archivos + estado \\ \hline
+    \texttt{--abbrev-commit} & SHA-1 reducido \\ \hline
+    \texttt{--relative-date} & Fecha en formato relativo \\ \hline
+    \texttt{--graph} & Muestra un gráfico ASCII \\ \hline
+    \texttt{--pretty=<op-pretty>} & Formato alternativo \\ \hline
+  \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}[fragile]{Ver el historial de confirmaciones}
+  \begin{center}
+  \begin{minted}{console}
+                   $ git log --pretty=<op-pretty>
+  \end{minted}
+  \alert{Opciones de format}
+  \end{center}
+  \begin{table}
+  \rowcolors{1}{solarized-base01!20}{solarized-base01!15}
+  \begin{tabular}{|r|l|} \hline
+    \texttt{oneline} & SHA-1 y mensaje \\ \hline
+    \texttt{short} & SHA-1, mensaje y autor \\ \hline
+    \texttt{full} & SHA-1, mensaje, autor y confirmadores \\ \hline
+    \texttt{fuller} & SHA-1, mensaje, autor, confirmadores y fechas \\ \hline
+    \texttt{format} & Formato personalizado (\href{https://git-scm.com/docs/pretty-formats}{info}) \\ \hline
+  \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}[fragile]{Ver el historial de confirmaciones}
+  \begin{center}
+  \begin{minted}{console}
+                       $ git log <opciones>
+  \end{minted}
+  \alert{Opciones para limitar la salida}
+  \end{center}
+  \begin{table}
+  \rowcolors{1}{solarized-base01!20}{solarized-base01!15}
+  \begin{tabular}{|r|p{6cm}|} \hline
+    \texttt{-<n>} & \texttt{n} últimas confirmaciones \\ \hline
+    \texttt{--since=<f>}, \texttt{--after=<f>} & Confirmaciones despues la fecha \texttt{f}\\ \hline
+    \texttt{--until=<f>}, \texttt{--before=<f>} & Confirmaciones hasta la fecha \texttt{f} \\ \hline
+    \texttt{--author=<c>}, \texttt{--committer=<c>} & Confirmaciones del ser \texttt{c} \\ \hline
+    \texttt{--merges}, \texttt{--no-merges} & Merges o no merges \\ \hline
+    \texttt{--grep <cadena>} & \texttt{cadena} está en el mensaje \\ \hline
+    \texttt{-S<cadena>} & Modifican código coincidente \newline con \texttt{cadena} \\ \hline
+  \end{tabular}
+  \end{table}
+\end{frame}
