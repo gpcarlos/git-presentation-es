@@ -1,0 +1,14 @@
+\begin{frame}{Gestionar ramas}
+  \begin{itemize}
+    \item \alert{Ver ramas}
+      \mint{console}| $ git branch -v|
+      {\scriptsize \ \ \texttt{-v}: Ver última confirmación de la rama} \\
+      {\scriptsize \ \ \texttt{*}: Rama a la que apunta HEAD}
+    \item \alert{Ver ramas que fusionadas con la rama activa}
+      \mint{console}| $ git branch --merged|
+      {\scriptsize \ \ Las ramas no activas pueden eliminarse ya que su contenido se ha incorporado a otras ramas} \\
+      {\scriptsize \ \ \texttt{--no-merged}: Ramas no fusionadas con la rama activa}
+    \item \alert{Eliminar ramas}
+      \mint{console}| $ git branch -d <nombre-rama>|
+  \end{itemize}
+\end{frame}
