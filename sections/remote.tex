@@ -29,3 +29,16 @@
     \node[anchor=north east,inner ysep=50pt, inner xsep=20pt] at (current page.north east) {\includegraphics[scale=0.5]{images/incaseoffire.png}};
   \end{tikzpicture}
 \end{frame}
+
+\begin{frame}{Trabajar con Remotos - Seguimiento}
+  \begin{itemize}
+    \item \alert{Crear una rama de seguimiento}
+      \mint{console}| $ git checkout --track <remoto>/<rama>|
+      \mint{console}| $ git checkout -b <rama> <remoto>/<rama>|
+    \item \alert{Asignar seguimiento a una rama creada}
+      \mint{console}| $ git branch -u <remoto>/<rama>|
+    \item \alert{Ver las ramas a la que hace seguimiento}
+      \mint{console}| $ git branch -vv|
+  \end{itemize}
+  Cuando hacemos \texttt{clone}, automáticamente \texttt{master} hace seguimiento de \texttt{origin/master}
+\end{frame}
