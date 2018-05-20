@@ -1,0 +1,27 @@
+\begin{frame}[fragile]{Reorganización de ramas}
+  Podemos coger los cambios confirmados de una ramas \\ y reaplicarlos en otra.
+  \mint{console}| $ git rebase <rama-en-la-cual-reorganizar>|
+  \warnning {\color{solarized-red} \ La reorganización altera el historial}
+\end{frame}
+
+\begin{frame}[fragile]{Reorganización de ramas }
+    \begin{columns}[onlytextwidth]
+      \column{0.52\textwidth}
+      \begin{exampleblock}{Ejemplo:}
+        \uncover<2->{
+        \mint{console}| $ git rebase master|}
+        \uncover<3->{
+        \mint{console}| $ git checkout master|}
+        \uncover<4->{
+        \mint{console}| $ git merge experiment|
+        {\scriptsize \hspace{0.5cm} \texttt{Fast-Forward}}}
+      \end{exampleblock}
+      \column{0.48\textwidth}
+        \begin{figure}
+          \only<1>{\scalebox{.95}{ \input{gitdags/branch14}}}
+          \only<2>{\scalebox{.95}{ \input{gitdags/branch15}}}
+          \only<3>{\scalebox{.95}{ \input{gitdags/branch16}}}
+          \only<4>{\scalebox{.95}{ \input{gitdags/branch17}}}
+        \end{figure}
+    \end{columns}
+\end{frame}
