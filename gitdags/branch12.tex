@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+  \gitDAG[grow right sep = 1.5em]{
+    A -- B -- {[nodes=highlighted commit] {C}} -- {
+      E -- {[nodes=highlighted commit] {G}} -- H,
+      D -- {[nodes=highlighted commit] {F}} -- H},
+  };
+  \gitbranch
+    {master}      % node name and text
+    {above=of H} % node placement
+    {H}          % target
+  \gitbranch
+    {issue53}      % node name and text
+    {below=of F} % node placement
+    {F}          % target
+  % HEAD reference
+  \gitHEAD
+    {above=of master} % node placement
+    {master}          % target
+\end{tikzpicture}

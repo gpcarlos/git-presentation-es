@@ -1,0 +1,53 @@
+\begin{frame}[fragile]{Fusión de ramas}
+    \begin{columns}
+      \column{0.48\textwidth}
+        \includegraphics[scale=0.27]{images/branch-bitbucket}
+      \column{0.52\textwidth}
+      Si queremos fusionar dos ramas, nos posicionamos en la rama donde queremos que se apliquen los cambios y ejecutamos:
+      \mint{console}| $ git merge <rama-a-fusionar>|
+    \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Fusión de ramas - \textsc{Fast-Forward}}
+    \begin{columns}[onlytextwidth]
+      \column{0.52\textwidth}
+      \begin{exampleblock}{Ejemplo \textsc{Fast-Forward}:}
+        \uncover<2->{
+        \mint{console}| $ git checkout master|}
+        \uncover<3->{
+        \mint{console}| $ git merge hotfix|
+        {\scriptsize \hspace{0.5cm} Adelanta el puntero de \texttt{master} a \texttt{hotfix}}}
+        \uncover<4->{
+        \mint{console}| $ git branch -d hotfix|}
+      \end{exampleblock}
+      \column{0.48\textwidth}
+        \begin{figure}
+          \only<1>{\scalebox{.95}{ \input{gitdags/branch6}}}
+          \only<2>{\scalebox{.95}{ \input{gitdags/branch7}}}
+          \only<3>{\scalebox{.95}{ \input{gitdags/branch8}}}
+          \only<4>{\scalebox{.95}{ \input{gitdags/branch9}}}
+        \end{figure}
+    \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Fusión de ramas - \textsc{3-way}}
+    \begin{columns}[onlytextwidth]
+      \column{0.52\textwidth}
+      \begin{exampleblock}{Ejemplo \textsc{3-way}:}
+        \uncover<2->{
+        \mint{console}| $ git checkout master|}
+        \uncover<3->{
+        \mint{console}| $ git merge issue53|
+        {\scriptsize \hspace{0.5cm} Crea un nuevo commit con la fusión a tres bandas de \\ \hspace{0.5cm} \texttt{master}, \texttt{issue53} y el \textbf{ancestro común} a ambas.}}
+        \uncover<4->{
+        \mint{console}| $ git branch -d issue53|}
+      \end{exampleblock}
+      \column{0.48\textwidth}
+        \begin{figure}
+          \only<1>{\scalebox{.85}{ \input{gitdags/branch10}}}
+          \only<2>{\scalebox{.85}{ \input{gitdags/branch11}}}
+          \only<3>{\scalebox{.80}{ \input{gitdags/branch12}}}
+          \only<4>{\scalebox{.80}{ \input{gitdags/branch13}} \\ \vspace{1.45cm}}
+        \end{figure}
+    \end{columns}
+\end{frame}
