@@ -39,14 +39,10 @@
   \end{minted}
 
   \alert{Saltarse el área de preparación}
-  \begin{columns}[onlytextwidth]
-  \column{0.6\textwidth}
   \begin{minted}{console}
     $ git commit -a -m 'mensaje'
   \end{minted}
-  \column{0.4\textwidth}
-    Sólo prepara y confirma los archivos que Git está rastreando!
-  \end{columns}
+  \hspace{1cm} {\scriptsize Sólo prepara y confirma los archivos que Git está rastreando!}
 
   \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=north east, inner xsep=45pt, inner ysep=60pt] at (current page.north east) {\includegraphics[scale=0.2]{images/areas}};
@@ -110,15 +106,15 @@ Untracked files:
 \begin{frame}[fragile]{Comandos básicos - Eliminar y Renombrar}
   \alert{Eliminar}
   \begin{itemize}
-    \item Eliminar un archivo no preparado y preparar la eliminación \warnning
+    \item Eliminar un archivo no preparado \warnning
     \begin{minted}{console}
   $ git rm <archivo>
     \end{minted}
-    \item Eliminar un archivo preparado y preparar la eliminación \warnning
+    \item Eliminar un archivo preparado \warnning
     \begin{minted}{console}
   $ git rm -f <archivo>
     \end{minted}
-    \item Dejar de rastrear sin eliminar
+    \item Eliminar del repositorio pero no del directorio de trabajo
     \begin{minted}{console}
   $ git rm --cached <archivo>
     \end{minted}

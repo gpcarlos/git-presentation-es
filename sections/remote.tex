@@ -17,14 +17,14 @@
   \begin{itemize}
     \item \alert{Traer remotos}
       \mint{console}| $ git fetch <nombre-remoto>|
-      Creará una nueva rama con el trabajo del remoto
+      {\scriptsize Creará una nueva rama con el trabajo del remoto}
     \item \alert{Traer y Combinar remotos}
       \mint{console}| $ git pull <nombre-remoto> <nombre-rama>|
       \texttt{push = fetch + merge}
     \item \alert{Enviar a tus remotos}
       \mint{console}| $ git push <nombre-remoto> <nombre-rama>|
   \end{itemize}
-  Si nuestra rama rastrea la rama remota, se puede no especificar nombres
+  Si nuestra rama sigue a la rama remota, se puede no especificar nombres
   \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=north east,inner ysep=50pt, inner xsep=20pt] at (current page.north east) {\includegraphics[scale=0.5]{images/incaseoffire.png}};
   \end{tikzpicture}
@@ -34,6 +34,7 @@
   \begin{itemize}
     \item \alert{Crear una rama de seguimiento}
       \mint{console}| $ git checkout --track <remoto>/<rama>|
+      {\scriptsize La rama se llamará \texttt{<rama>} y nos moveremos a ella}
       \mint{console}| $ git checkout -b <rama> <remoto>/<rama>|
     \item \alert{Asignar seguimiento a una rama creada}
       \mint{console}| $ git branch -u <remoto>/<rama>|
