@@ -2,12 +2,10 @@
   Ver los cambios de un archivo respecto a su última confirmación
   \begin{itemize}
     \item \alert{Archivo no preparado}
-    \begin{minted}{console}
-      $ git diff <archivo>
-    \end{minted}
+      \mint{console}| $ git diff <archivo>|
     \item \alert{Archivo preparado}
-    \begin{minted}{console}
-      $ git diff --cached <archivo>
-    \end{minted}
+      \mint{console}| $ git diff --cached <archivo>|
+    \item \alert{Diferencias en otro commit}
+      \mint{console}| $ git diff <SHA-1> <archivo>|
   \end{itemize}
 \end{frame}
