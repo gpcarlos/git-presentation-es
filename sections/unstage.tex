@@ -6,10 +6,11 @@
         \mint{console}| $ git commit --amend|
       \item \alert{Deshacer un archivo preparado}
         \mint{console}| $ git reset HEAD <archivo>|
-      \item \alert{Deshacer los cambios de un archivo preparado} \warnning
-        \mint{console}| $ git reset --hard HEAD <archivo>|
+      \item \alert{Deshacer los cambios de todos los archivos} \warnning
+        \mint{console}| $ git reset --hard HEAD|
       \item \alert{Deshacer los cambios un archivo modificado} \warnning
         \mint{console}| $ git checkout -- <archivo>|
+        {\scriptsize \hspace{0.5cm} Sólo para archivos no preparados}
     \end{itemize}
     \column{0.3\textwidth}
       \includegraphics[scale=0.2]{images/marty-mcfly}
