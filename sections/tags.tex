@@ -4,10 +4,10 @@
     \begin{itemize}
       \item \alert{Etiquetas Ligeras} \\
         Puntero a commit
-        \mint{console}|  $ git tag <nombre-tag>|
+        \mint{console}| $ git tag <nombre-tag>|
       \item \alert{Etiquetas Anotadas} \\
         Puntero, mensaje, etiquetador...
-        \mint{console}|  $ git tag -a <nombre-tag> -m 'msj'|
+        \mint{console}| $ git tag -a <nombre-tag> -m 'msj'|
     \end{itemize}
     \column{0.4\textwidth}
       \input{gitdags/tagdag}
@@ -19,9 +19,9 @@
     \column{0.6\textwidth}
     \begin{itemize}
       \item \alert{Etiquetado Tardío} \\
-      \mint{console}|  $ git tag -a <nombre-tag> <SHA-1>|
+      \mint{console}| $ git tag -a <nombre-tag> <SHA-1>|
       \item \alert{Eliminar etiqueta} \warnning \\
-      \mint{console}|  $ git tag -d <nombre-tag>|
+      \mint{console}| $ git tag -d <nombre-tag>|
     \end{itemize}
     \column{0.4\textwidth}
       \input{gitdags/tagdag}
@@ -33,11 +33,11 @@
     \column{0.6\textwidth}
     \begin{itemize}
       \item \alert{Todas}
-        \mint{console}|  $ git tag|
+        \mint{console}| $ git tag|
       \item \alert{Por patrón}
-        \mint{console}|  $ git tag -l 'v1*'|
+        \mint{console}| $ git tag -l 'v1*'|
       \item \alert{Específica}
-        \mint{console}|  $ git show <nombre-tag>|
+        \mint{console}| $ git show <nombre-tag>|
     \end{itemize}
     \column{0.4\textwidth}
       \input{gitdags/tagdag}
@@ -50,9 +50,9 @@
     \texttt{git push} no transfiere etiquetas a remotos
     \begin{itemize}
       \item \alert{Todas}
-        \mint{console}|  $ git push origin --tags|
+        \mint{console}| $ git push origin --tags|
       \item \alert{Específica}
-        \mint{console}|  $ git push origin <nombre-tag>|
+        \mint{console}| $ git push origin <nombre-tag>|
     \end{itemize}
     \column{0.4\textwidth}
       \input{gitdags/tagdag}
@@ -63,11 +63,11 @@
   \begin{columns}[T,onlytextwidth]
     \column{0.6\textwidth}
     Para colocar en el directorio de trabajo una versión, es necesario crear una nueva rama en esa etiqueta.
-    \mint{console}|  $ git checkout -b <n-rama> <n-tag>|
+    \mint{console}| $ git checkout -b <n-rama> <n-tag>|
     \uncover<2>{
     \vspace{0.5cm}
     \begin{exampleblock}{Ejemplo:}
-      \mint{console}|  $ git checkout -b version0p9 v0.9|
+      \mint{console}| $ git checkout -b version0p9 v0.9|
     \end{exampleblock}}
     \column{0.4\textwidth}
       \only<1>{\input{gitdags/tagdag}}
