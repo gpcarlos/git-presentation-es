@@ -10,34 +10,125 @@
 \end{frame}
 
 \begin{frame}{¿Qué es Git?}
+  \only<1>{\begin{center}
+    \includegraphics[scale=0.9]{images/caos}
+  \end{center}}
+  \only<2>{\begin{center}
+    \includegraphics[scale=0.9]{images/nocaos}
+  \end{center}}
+\end{frame}
+
+\begin{frame}{¿Git == GitHub?}
   \begin{columns}[onlytextwidth]
-    \column{0.5\textwidth}
-    \alert{\Large ¿Git = GitHub? {\color{solarized-red} \textbf{No}}} \\
-    GitHub es una forja (plataforma de desarrollo colaborativo) para alojar proyectos Git.
-    \column{0.5\textwidth}
+    \column{0.25\textwidth}
     \begin{center}
       \animategraphics[height=1.3in,autoplay,loop] {12}{images/DF/githubDP1_}{0}{7}
+    \end{center}
+    \column{0.5\textwidth}
+    \begin{center}
+      \alert{\huge ¿Git == GitHub? \\
+      \smallskip
+      \uncover<2->{
+      {\color{solarized-red} \textbf{NO}}}} \\
+      \bigskip
+      \uncover<3>{
+      GitHub es una forja (plataforma de desarrollo colaborativo) para alojar proyectos Git.}
+    \end{center}
+    \column{0.25\textwidth}
+    \begin{center}
       \animategraphics[height=1.3in,autoplay,loop] {12}{images/DF/githubDP2_}{0}{13}
     \end{center}
   \end{columns}
 \end{frame}
 
-\begin{frame}{¿Qué es Git?}
-  \alert{\Large ¿Cómo se utiliza Git?}
+\begin{frame}{Otras forjas}
+  \begin{columns}[onlytextwidth]
+    \column{0.5\textwidth}
+    \begin{center}
+      \includegraphics[scale=0.3]{images/logoGitLab}
+    \end{center}
+    \column{0.5\textwidth}
+  \end{columns}
+  \begin{columns}[onlytextwidth]
+    \column{0.5\textwidth}
+    \column{0.5\textwidth}
+    \begin{center}
+      \includegraphics[scale=0.4]{images/logoBitbucket}
+    \end{center}
+  \end{columns}
+  \begin{columns}[onlytextwidth]
+    \column{0.5\textwidth}
+    \begin{center}
+      \includegraphics[scale=0.25]{images/logoSourceForge}
+    \end{center}
+    \column{0.5\textwidth}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{¿Cómo se utiliza Git?}
+  % \alert{\Large ¿Cómo se utiliza Git?}
   \begin{columns}[onlytextwidth]
     \column{0.6\textwidth}
-    Git se utiliza mediante comandos en la \textbf{Terminal}. \\
-
-    Pero existen:
+    Existen:
     \begin{itemize}
       \item Clientes gráficos (GitKraken, SourceTree, GitHub Desktop...)
-      \item Integración en muchos editores e IDEs (Atom, Visual Studio Code, Eclipse...)
+      \item Integración en muchos editores e IDEs (Atom, Visual Studio Code, IntelliJ IDEA...)
     \end{itemize}
     \vspace{0.5cm}
     \uncover<2>{
-    {\color{violet}\large Lo mejor es la \textbf{Terminal}.}}
+    {\color{violet}\large Git se utiliza mediante comandos en la \textbf{Terminal}.}}
     \column{0.4\textwidth}
     \uncover<2>{
     \includegraphics[scale=0.4]{images/hackerMan.eps}}
   \end{columns}
+  \uncover<1>{
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=north east, inner xsep=30pt, inner ysep=40pt] at (current page.north east) {\includegraphics[scale=0.11]{images/logoGitKraken.png}};
+      \node[anchor=north east, inner xsep=80pt, inner ysep=50pt] at (current page.north east) {\includegraphics[scale=0.3]{images/logoSourceTree.png}};
+      \node[anchor=north east, inner xsep=30pt, inner ysep=120pt] at (current page.north east) {\includegraphics[scale=0.03]{images/logoAtom.png}};
+      \node[anchor=north east, inner xsep=80pt, inner ysep=180pt] at (current page.north east) {\includegraphics[scale=0.045]{images/logoVisualStudioCode.png}};
+      \node[anchor=north east, inner xsep=130pt, inner ysep=135pt] at (current page.north east) {\includegraphics[scale=0.040]{images/logoIntelliJIDEA.png}};
+    \end{tikzpicture}
+  }
+\end{frame}
+
+\begin{frame}{¿Cómo funciona Git? - Las 3 áreas}
+  \begin{center}
+    \begin{tikzpicture}[head/.style={line width=1pt, draw=solarized-base01, rounded corners=1pt, text width=3cm, align=center}]
+    \node[head, fill=solarized-orange!25] (wd) {Working directory};
+    \node[head, fill=solarized-blue!25, right=of wd] (sa) {Staging \\ area};
+    \node[head, fill=solarized-base1!25, right=of sa] (gr) {.git directory \\ (Repository)};
+    \begin{scope}[line width=2pt,solarized-base01]
+    \foreach \box in {wd,sa,gr}
+      \draw (\box.south) -- +(0,-4cm);
+    \end{scope}
+    \begin{scope}[every node/.style={single arrow, line width=1pt, draw=solarized-base01, fill=solarized-green!25, anchor=west, align=center}]
+    \node [anchor=east, text width=7.8cm,shape border rotate=180] at ([yshift=-1cm]gr.south) {Checkout the project};
+    \node [anchor=west, text width=3.5cm] at ([yshift=-2.2cm]wd.south) {Staged fixed};
+    \node [anchor=west, text width=3.5cm] at ([yshift=-3.4cm]sa.south) {Commit};
+    \end{scope}
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+\begin{frame}{¿Cómo funciona Git? - Estados de los archivos}
+  \begin{center}
+    \begin{tikzpicture}[head/.style={line width=1pt, draw=solarized-base01, rounded corners=1pt, text width=2.3cm, align=center}]
+    \node[head, fill=solarized-base1!25] (ut) {Untracked};
+    \node[head, fill=solarized-blue!25, right=of ut] (um) {Unmodified};
+    \node[head, fill=solarized-yellow!25, right=of um] (mo) {Modified};
+    \node[head, fill=solarized-orange!25, right=of mo] (st) {Staged};
+    \begin{scope}[line width=2pt,solarized-base01]
+    \foreach \box in {ut,um,mo,st}
+      \draw (\box.south) -- +(0,-6cm);
+    \end{scope}
+    \begin{scope}[every node/.style={single arrow, line width=1pt, draw=solarized-base01, fill=solarized-green!25, anchor=west, align=center}]
+    \node [anchor=west, text width=10.01cm] at ([yshift=-1cm]ut.south) {Add the file};
+    \node [anchor=west, text width=2.8cm] at ([yshift=-2.1cm]um.south) {Edit the file};
+    \node [anchor=west, text width=2.8cm] at ([yshift=-3.2cm]mo.south) {Stage the file};
+    \node [anchor=east, text width=2.8cm,shape border rotate=180] at ([yshift=-4.3cm]um.south) {Remove the file};
+    \node [anchor=east, text width=6.4cm,shape border rotate=180] at ([yshift=-5.4cm]st.south) {Commit};
+    \end{scope}
+    \end{tikzpicture}
+  \end{center}
 \end{frame}

@@ -2,8 +2,7 @@
 \usetheme{metropolis}
 \usepackage[spanish]{babel}
 \usepackage{tikz}
-\usetikzlibrary{chains}
-\usetikzlibrary{trees}
+\usetikzlibrary{chains, trees, positioning, shapes}
 \usepackage{minted}
 \setminted{ style=colorful, fontsize=\small, breaklines}
 \usepackage{xcolor-solarized}
@@ -16,20 +15,19 @@
 \newcommand{\github}{\href{https://www.github.com/gpcarlos}{\faGithub\ gpcarlos}}
 \newcommand{\warnning}{{\color{solarized-red}\faWarning}}
 
-\title{Taller de Git}
-\subtitle{Avanzado}
+\title{Introducción a Git y GitHub}
+\subtitle{ }
 \author{Carlos Gallardo Polanco \\ \twitter \\ \github}
-\institute{Escuela Superior de Ingeniería}
+% \institute{Escuela Superior de Ingeniería}
 \date{22 de mayo de 2018}
-\subject{Actividad Científico-Técnica}
-\keywords{ESI, UCA, Git, GitHub, LaTeX}
+\subject{Betabeers}
+\keywords{Git, GitHub, LaTeX}
 
 \definecolor{fafafa}{rgb}{0.98, 0.98, 0.98}
 \newcommand{\whiteTitle}{
-  \title{\color{fafafa}Taller de Git}
-  \subtitle{\color{fafafa}Avanzado}
+  \title{\color{fafafa}Introducción a Git y GitHub}
   \author{\color{fafafa}Carlos Gallardo Polanco \\ \twitter \\ \github}
-  \institute{\color{fafafa}Escuela Superior de Ingeniería}
+  % \institute{\color{fafafa}Escuela Superior de Ingeniería}
   \date{\color{fafafa}22 de mayo de 2018}
 }
 
@@ -43,7 +41,7 @@
   \maketitle
   \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=north east,inner sep=40pt] at (current page.north east) {\includegraphics[scale=0.065]{images/logoGit.png}};
-    \node[anchor=south east,inner sep=40pt] at (current page.south east) {\includegraphics[scale=0.3]{images/logoUCA.eps}};
+    \node[anchor=south east,inner sep=40pt] at (current page.south east) {\includegraphics[scale=0.11]{images/logoBetabeers.png}};
   \end{tikzpicture}
 \end{frame}
 
@@ -53,47 +51,10 @@
 %  Conceptos básicos
 \input{sections/basicConcepts}
 
-%  Ver el historial
-\input{sections/log}
-
-%  Comprobar cambio
-\input{sections/diff}
-
-%  Volver atrás en el historial
-\input{sections/unstage}
-
-%  Crear ramas y moverse entre ramas
-\input{sections/branch}
-
-%  Fusionar ramas
-\input{sections/merge}
-
-%  Gestionar ramas
-\input{sections/manageBranches}
-
-%  Reorganizar ramas
-\input{sections/rebase}
-
 %  Remotos (pull y push)
 \input{sections/remote}
 
-%  Guardado rápido
-\input{sections/stash}
-
-%  Etiquetas
-\input{sections/tags}
-
-%  gitignore
-\input{sections/gitignore}
-
-%  Configuración
-\input{sections/config}
-
-%  Utilización de SSH en GitHub
-\input{sections/sshGithub}
-
-% TODO Montar un servidor (Gitlab)
-% \input{sections/gitlab}
+\section{Ejemplo}
 
 %  githubEducation
 \input{sections/githubEducation}
@@ -112,7 +73,7 @@
   \maketitle
   \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=north east,inner sep=40pt] at (current page.north east) {\includegraphics[scale=0.27]{images/logoGitw.png}};
-    \node[anchor=south east,inner sep=40pt] at (current page.south east) {\includegraphics[scale=0.3]{images/logoUCAw.png}};
+    \node[anchor=south east,inner sep=40pt] at (current page.south east) {\includegraphics[scale=0.11]{images/logoBetabeersw.png}};
   \end{tikzpicture}
 \end{frame}
 

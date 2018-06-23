@@ -78,30 +78,30 @@ Untracked files:
   \end{columns}
 \end{frame}
 
-\begin{frame}[fragile]{Comandos básicos - Revisar el estado}
-  \begin{columns}[onlytextwidth]
-  \column{0.35\textwidth}
-  \begin{tabular}{rcl}
-    \texttt{A} & $\Rightarrow$ & Nuevo \\
-    \texttt{M} & $\Rightarrow$ & Modificado \\
-    \texttt{D} & $\Rightarrow$ & Eliminado \\
-    \texttt{?} & $\Rightarrow$ & No rastreado \\
-  \end{tabular}
-  \column{0.02\textwidth}
-  \column{0.63\textwidth}
-  \begin{minted}[escapeinside=||, frame=single, framerule=1pt, fontsize=\scriptsize, bgcolor=solarized-base1!30]{console}
-[user@linux ~]$ git status -s
-| {\color{solarized-red}M}| .gitignore
-|{\color{solarized-green}D} | basura.text
-|{\color{solarized-green}A} | presentation.tex
-|{\color{solarized-red}??}| configuration.tex
-  \end{minted}
-  \begin{center}
-  $1^a$ columna: En estado preparado \\
-  $2^a$ columna: En estado no preparado
-  \end{center}
-  \end{columns}
-\end{frame}
+% \begin{frame}[fragile]{Comandos básicos - Revisar el estado}
+%   \begin{columns}[onlytextwidth]
+%   \column{0.35\textwidth}
+%   \begin{tabular}{rcl}
+%     \texttt{A} & $\Rightarrow$ & Nuevo \\
+%     \texttt{M} & $\Rightarrow$ & Modificado \\
+%     \texttt{D} & $\Rightarrow$ & Eliminado \\
+%     \texttt{?} & $\Rightarrow$ & No rastreado \\
+%   \end{tabular}
+%   \column{0.02\textwidth}
+%   \column{0.63\textwidth}
+%   \begin{minted}[escapeinside=||, frame=single, framerule=1pt, fontsize=\scriptsize, bgcolor=solarized-base1!30]{console}
+% [user@linux ~]$ git status -s
+% | {\color{solarized-red}M}| .gitignore
+% |{\color{solarized-green}D} | basura.text
+% |{\color{solarized-green}A} | presentation.tex
+% |{\color{solarized-red}??}| configuration.tex
+%   \end{minted}
+%   \begin{center}
+%   $1^a$ columna: En estado preparado \\
+%   $2^a$ columna: En estado no preparado
+%   \end{center}
+%   \end{columns}
+% \end{frame}
 
 \begin{frame}[fragile]{Comandos básicos - Eliminar y Renombrar}
   \alert{Eliminar}
