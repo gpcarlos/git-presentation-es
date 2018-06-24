@@ -1,7 +1,7 @@
-# Taller de Git (Avanzado)
-Presentación para la Actividad Científico-Técnica Taller de Git (avanzado)
+# Introducción a Git y GitHub
+Presentación para el Betabeers GDG Cádiz Nº 30
 
-Descarga la presentación en .pdf [aquí](https://drive.google.com/drive/folders/1kafRAulLOz213KkgcAVM2J_8vC8DXj-M?usp=sharing)
+Descarga la presentación en .pdf
+[aquí](https://drive.google.com/drive/folders/1W84CXMAkaQhEtcTGBwYbr1SymIPXnQxW?usp=sharing)
 
-Escuela Superior de Ingeniería.
-Universidad de Cádiz
+![meetup)](images/meetup_30edBB.png)
